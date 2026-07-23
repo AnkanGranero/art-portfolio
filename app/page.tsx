@@ -1,33 +1,14 @@
-export default function Home() {
-  type Block = {
-    href: string;
-    slug: string;
-  };
+import { getCategories } from '@/sanity/lib/getCategories';
+import { urlFor } from '@/sanity/lib/image';
+import CategoryCard from './components/CategoryCard';
 
-  const blocks: Block[] = [
-    {
-      href: "",
-      slug: "",
-    },
-    {
-      href: "",
-      slug: "",
-    },
-    {
-      href: "",
-      slug: "",
-    },
-    {
-      href: "",
-      slug: "",
-    },
-  ];
+export default async function Home() {
+  const categories = await getCategories();
+
   return (
     <main>
-      {blocks.map((b) => (
-        <p key={b.slug} className="bg-red-500">
-          {b.href}
-        </p>
+      {categories.map((c: any) => (
+        <CategoryCard key={c._id} category={c}/>
       ))}
     </main>
   );
