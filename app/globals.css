@@ -21,7 +21,8 @@ main {
   place-items: center;
   padding: 2rem;
   text-align: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 h1 {

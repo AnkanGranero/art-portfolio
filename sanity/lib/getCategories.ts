@@ -6,6 +6,13 @@ export async function getCategories() {
     _id,
     title,
     slug,
-    categoryImage,
+    categoryImage{
+    asset->{
+    _id,
+    url,
+    metadata { dimensions {width, height } }
+    },
+    hotspot
+    },
     headerImage}`);
 }

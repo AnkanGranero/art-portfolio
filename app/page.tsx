@@ -7,8 +7,8 @@ export default async function Home() {
 
   return (
     <main>
-      {categories.map((c: any) => (
-        <CategoryCard key={c._id} category={c}/>
+      {categories.map((c: any, index: number) => (
+        <CategoryCard key={c._id} category={c} priority={index < 3} />
       ))}
     </main>
   );
