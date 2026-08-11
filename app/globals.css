@@ -15,21 +15,6 @@ body {
   color: #111111;
 }
 
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem;
-  text-align: center;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-h1 {
-  margin: 0 0 0.75rem;
-  font-size: 2rem;
-}
-
 p {
   margin: 0;
   max-width: 32rem;
