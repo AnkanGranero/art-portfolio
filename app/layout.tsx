@@ -4,8 +4,8 @@ import "./globals.css";
 import Header from "./components/Header";
 
 export const metadata: Metadata = {
-  title: "My portfolio",
-  description: "My art porfolio.",
+  title: process.env.SITE_TITLE || "My portfolio",
+  description: process.env.SITE_DESCRIPTION || "My art porfolio.",
 };
 
 export default function RootLayout({
