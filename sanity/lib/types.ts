@@ -35,3 +35,19 @@ export type CategoryDetail = Category & {
   body?: PortableTextBlock[];
   gallery?: GalleryImage[];
 };
+
+export type SocialPlatform =
+  | 'instagram'
+  | 'facebook'
+  | 'email'
+  | 'linkedin'
+  | 'twitter'
+  | 'tiktok'
+  | 'youtube'
+  | 'pinterest';
+
+export type SocialLink = {
+  _id: string;
+  platform: SocialPlatform;
+  url: string;
+};
