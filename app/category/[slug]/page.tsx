@@ -12,11 +12,11 @@ export default async function Category({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <main className="min-h-screen p-8 flex flex-col gap-8 max-w-3xl mx-auto">
-      <section>
-        <h1 className="text-3xl font-bold mb-4">{category.title}</h1>
+    <main className="min-h-screen p-8 flex flex-col gap-8 mx-auto">
+      <section >
+        <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-center">{category.title}</h1>
         {category.body && (
-          <div className="max-w-2xl">
+          <div className="portable-text max-w-6xl mx-auto text-xl text-center">
             <PortableText value={category.body} />
           </div>
         )}

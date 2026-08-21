@@ -5,7 +5,8 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-weight: var(--font-body-weight);
 }
 
 body {
@@ -15,9 +16,38 @@ body {
   color: #111111;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  font-weight: var(--font-heading-weight);
+}
+
 p {
-  margin: 0;
-  max-width: 32rem;
+  margin: 0 auto;
   line-height: 1.6;
   color: #444444;
+}
+
+.portable-text ul,
+.portable-text ol {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.portable-text ul {
+  list-style: disc;
+}
+
+.portable-text ol {
+  list-style: decimal;
+}
+
+.portable-text li {
+  margin-bottom: 0.25rem;
 }

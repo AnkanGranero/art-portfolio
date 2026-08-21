@@ -38,7 +38,7 @@ export default function SocialLinks({ links }: SocialLinksProps) {
               target={link.platform === 'email' ? undefined : '_blank'}
               rel={link.platform === 'email' ? undefined : 'noopener noreferrer'}
               aria-label={link.platform}
-              className="text-2xl hover:opacity-70"
+              className="text-4xl lg:text-6xl hover:opacity-70"
             >
               <Icon />
             </a>

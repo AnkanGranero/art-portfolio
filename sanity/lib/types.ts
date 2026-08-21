@@ -51,3 +51,8 @@ export type SocialLink = {
   platform: SocialPlatform;
   url: string;
 };
+
+export type SiteSettings = {
+  headingFont?: string;
+  bodyFont?: string;
+};
