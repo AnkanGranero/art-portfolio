@@ -18,6 +18,7 @@ export default function Gallery({ images }: GalleryProps) {
               className="w-full h-auto"
               width={image.asset.metadata?.dimensions?.width}
               height={image.asset.metadata?.dimensions?.height}
+              unoptimized={image.asset.url.endsWith('.gif')}
             />
           )}
         </div>
