@@ -14,10 +14,14 @@ import {
   type HeadingFontKey,
 } from "./fonts";
 
-export const metadata: Metadata = {
-  title: process.env.SITE_TITLE || "My portfolio",
-  description: process.env.SITE_DESCRIPTION || "My art porfolio.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings();
+
+  return {
+    title: settings.title || process.env.SITE_TITLE || "My portfolio",
+    description: process.env.SITE_DESCRIPTION || "My art porfolio.",
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -25,6 +29,7 @@ export default async function RootLayout({
   children: ReactNode;
 }>) {
   const settings = await getSiteSettings();
+  const siteTitle = settings.title || process.env.SITE_TITLE || "My portfolio";
 
   const heading =
     HEADING_FONTS[settings.headingFont as HeadingFontKey] ??
@@ -42,7 +47,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={fontVariables} style={fontStyle}>
       <body>
-        <Header />
+        <Header title={siteTitle} />
         {children}
       </body>
     </html>

@@ -53,6 +53,7 @@ export type SocialLink = {
 };
 
 export type SiteSettings = {
+  title?: string;
   headingFont?: string;
   bodyFont?: string;
 };

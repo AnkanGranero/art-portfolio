@@ -6,6 +6,12 @@ export const siteSettingsType = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'title',
+      title: 'Site title',
+      type: 'string',
+      description: 'Shown in the header and browser tab.',
+    }),
+    defineField({
       name: 'headingFont',
       title: 'Heading font',
       type: 'string',
