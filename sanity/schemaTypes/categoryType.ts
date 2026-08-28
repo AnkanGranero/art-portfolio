@@ -12,6 +12,12 @@ export const categoryType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      description: 'Controls the display order on the start page, lowest first.',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',

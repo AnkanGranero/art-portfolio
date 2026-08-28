@@ -2,7 +2,7 @@ import { client } from '@/sanity/lib/client';
 
 export async function getCategories() {
   return client.fetch(`
-    *[_type == 'category']{
+    *[_type == 'category'] | order(order asc){
     _id,
     title,
     slug,
