@@ -41,5 +41,37 @@ export const siteSettingsType = defineType({
       initialValue: 'inter',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'categoryHeadingSize',
+      title: 'Category page heading size',
+      description: 'Size of the title (h1) on a category page, for mobile and desktop.',
+      type: 'string',
+      options: {
+        layout: 'dropdown',
+        list: [
+          { title: 'Small', value: 'small' },
+          { title: 'Medium', value: 'medium' },
+          { title: 'Large', value: 'large' },
+        ],
+      },
+      initialValue: 'medium',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'categoryBodySize',
+      title: 'Category page body text size',
+      description: 'Size of the body text on a category page, for mobile and desktop.',
+      type: 'string',
+      options: {
+        layout: 'dropdown',
+        list: [
+          { title: 'Small', value: 'small' },
+          { title: 'Medium', value: 'medium' },
+          { title: 'Large', value: 'large' },
+        ],
+      },
+      initialValue: 'medium',
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 })

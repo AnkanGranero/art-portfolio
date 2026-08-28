@@ -56,4 +56,6 @@ export type SiteSettings = {
   title?: string;
   headingFont?: string;
   bodyFont?: string;
+  categoryHeadingSize?: string;
+  categoryBodySize?: string;
 };

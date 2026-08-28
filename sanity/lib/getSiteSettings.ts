@@ -5,7 +5,7 @@ import type { SiteSettings } from '@/sanity/lib/types';
 export const getSiteSettings = cache(async (): Promise<SiteSettings> => {
   return (
     (await client.fetch(
-      `*[_type == 'siteSettings'][0]{ title, headingFont, bodyFont }`
+      `*[_type == 'siteSettings'][0]{ title, headingFont, bodyFont, categoryHeadingSize, categoryBodySize }`
     )) ?? {}
   );
 });
